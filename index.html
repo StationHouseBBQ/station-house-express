@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Station House Express · Investor Pitch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --red: #c41e3a;
+    --gold: #d4af37;
+    --black: #0d0d0d;
+    --dark: #1a1a1a;
+    --gray: #2a2a2a;
+    --light: #f5f5f5;
+    --muted: #a0a0a0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--black);
+    color: var(--light);
+    line-height: 1.6;
+  }
+  h1, h2, h3, .logo-text { font-family: 'Oswald', sans-serif; letter-spacing: 0.5px; }
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(13,13,13,0.92); backdrop-filter: blur(10px);
+    border-bottom: 1px solid #333;
+    padding: 14px 0;
+  }
+  header .inner { display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img { height: 48px; width: auto; }
+  .brand span { font-family: 'Oswald', sans-serif; font-size: 1.25rem; font-weight: 600; }
+  nav a { margin-left: 22px; color: var(--light); font-size: 0.95rem; font-weight: 500; }
+  nav a:hover { color: var(--gold); text-decoration: none; }
+  .hero {
+    position: relative;
+    min-height: 78vh;
+    display: flex; align-items: center;
+    background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+                url('images/exterior.jpg') center/cover no-repeat;
+    padding: 80px 0;
+  }
+  .hero-content { max-width: 680px; }
+  .hero h1 { font-size: clamp(2.8rem, 6vw, 4.2rem); line-height: 1.05; margin-bottom: 12px; }
+  .hero h1 span { color: var(--red); }
+  .tagline { font-size: 1.25rem; color: var(--gold); margin-bottom: 18px; font-weight: 500; }
+  .hero p { font-size: 1.1rem; max-width: 540px; margin-bottom: 28px; color: #ddd; }
+  .btn {
+    display: inline-block; background: var(--red); color: white;
+    padding: 14px 28px; border-radius: 4px; font-weight: 600;
+    font-size: 1rem; margin-right: 12px;
+  }
+  .btn:hover { background: #a01830; text-decoration: none; }
+  .btn-outline { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+  .btn-outline:hover { background: var(--gold); color: var(--black); }
+  section { padding: 80px 0; }
+  section h2 { font-size: 2.4rem; margin-bottom: 8px; }
+  .sub { color: var(--gold); font-weight: 600; margin-bottom: 28px; letter-spacing: 1px; text-transform: uppercase; font-size: 0.9rem; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .card {
+    background: var(--dark); border: 1px solid #333; border-radius: 8px;
+    padding: 24px; text-align: center;
+  }
+  .card .num { font-family: 'Oswald', sans-serif; font-size: 2.4rem; color: var(--gold); font-weight: 700; }
+  .card .label { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+  .img-frame { border-radius: 8px; overflow: hidden; border: 1px solid #333; }
+  .img-frame img { width: 100%; height: auto; display: block; }
+  .why-item { margin-bottom: 22px; }
+  .why-item h3 { color: var(--gold); font-size: 1.2rem; margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+  th, td { padding: 14px 12px; text-align: left; border-bottom: 1px solid #333; }
+  th { color: var(--gold); font-weight: 600; }
+  .highlight { background: rgba(196,30,58,0.15); }
+  footer {
+    background: var(--dark); border-top: 1px solid #333;
+    padding: 40px 0; text-align: center; color: var(--muted); font-size: 0.9rem;
+  }
+  footer img { height: 64px; margin-bottom: 12px; }
+  @media (max-width: 800px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    nav { display: none; }
+    .hero { min-height: 60vh; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container inner">
+    <div class="brand">
+      <img src="images/logo.png" alt="Station House BBQ" />
+      <span>STATION HOUSE EXPRESS</span>
+    </div>
+    <nav>
+      <a href="#concept">Concept</a>
+      <a href="#economics">Economics</a>
+      <a href="#returns">Returns</a>
+      <a href="#scale">Scale</a>
+      <a href="#ask">The Ask</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="sub">Investor Pitch · October 2026 · Tampa</div>
+    <h1>STATION HOUSE<br><span>EXPRESS</span></h1>
+    <div class="tagline">Fast Casual Craft BBQ · Cubans · 5-Alarm Samplers</div>
+    <p>A high-throughput counter service model built on Station House BBQ’s proven smoked meats and Cuban sandwiches. Limited menu. Commissary-supported. Designed for speed, consistency, and strong unit economics.</p>
+    <a href="#ask" class="btn">Partner With Us</a>
+    <a href="#economics" class="btn btn-outline">See the Numbers</a>
+  </div>
+</section>
+
+<section id="concept">
+  <div class="container">
+    <div class="sub">The Concept</div>
+    <h2>Firefighter-themed fast casual craft BBQ</h2>
+    <div class="grid-2" style="margin-top: 32px;">
+      <div>
+        <p style="margin-bottom: 18px;">1,500 sq ft · 32 seats. Lunch service 11–2:30 with catering pickups until 7 pm. Five-day week focused on the highest-volume window.</p>
+        <ul style="list-style: none; line-height: 2;">
+          <li><strong style="color: var(--gold);">Commissary meats</strong> — Cost + 25% transfer from central kitchen</li>
+          <li><strong style="color: var(--gold);">Hero items</strong> — 5-Alarm Samplers + Cubans with strong plate margins</li>
+          <li><strong style="color: var(--gold);">Limited menu</strong> — 5 meats + 3 sides. Easy training, consistent quality</li>
+          <li><strong style="color: var(--gold);">Visible craft</strong> — Guests watch the cutter work the brisket under heat lamps</li>
+        </ul>
+      </div>
+      <div class="img-frame">
+        <img src="images/exterior2.jpg" alt="Station House Express exterior with flag and ambulance" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background: var(--dark);">
+  <div class="container">
+    <div class="sub">The Experience</div>
+    <h2>Visible craft. Speed of fast food.</h2>
+    <div class="grid-3" style="margin-top: 36px;">
+      <div class="img-frame"><img src="images/interior.jpg" alt="Interior with logo on wall" /></div>
+      <div class="img-frame"><img src="images/cutting.jpg" alt="Cutting station" /></div>
+      <div class="img-frame"><img src="images/food.jpg" alt="5-Alarm Sampler" /></div>
+    </div>
+    <p style="margin-top: 28px; max-width: 800px; color: #ccc;">Order, pay, and pick up in minutes. Firefighter branding, open kitchen energy, and premium product without full-service overhead.</p>
+  </div>
+</section>
+
+<section id="economics">
+  <div class="container">
+    <div class="sub">Unit Economics</div>
+    <h2>Base case store performance</h2>
+    <div class="grid-4" style="margin-top: 36px;">
+      <div class="card"><div class="num">$3,600</div><div class="label">Sales / day</div></div>
+      <div class="card"><div class="num">$77.9k</div><div class="label">Sales / month</div></div>
+      <div class="card"><div class="num">55%</div><div class="label">Prime cost</div></div>
+      <div class="card"><div class="num">$18.3k</div><div class="label">Store EBITDA / mo</div></div>
+    </div>
+    <div class="grid-3" style="margin-top: 24px;">
+      <div class="card"><div class="num">23.5%</div><div class="label">EBITDA margin</div></div>
+      <div class="card"><div class="num">$2,205</div><div class="label">Break-even / day</div></div>
+      <div class="card"><div class="num">25 mo</div><div class="label">Investor payback (Base)</div></div>
+    </div>
+    <p style="margin-top: 28px; color: var(--muted); font-size: 0.95rem;">Volumes anchored to recent Seminole Heights Square data. Base ≈ $2,800–$3,600 daily. Full editable model in the accompanying workbook.</p>
+  </div>
+</section>
+
+<section id="scenarios" style="background: var(--dark);">
+  <div class="container">
+    <div class="sub">Scenario Range</div>
+    <h2>Conservative · Base · Strong</h2>
+    <table>
+      <thead>
+        <tr><th></th><th>Conservative</th><th>Base</th><th>Strong</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sales / month</td><td>$50.7k</td><td class="highlight">$77.9k</td><td>$109.1k</td></tr>
+        <tr><td>Store EBITDA / month</td><td>$1.8k</td><td class="highlight">$18.3k</td><td>$37.2k</td></tr>
+        <tr><td>EBITDA margin</td><td>3.5%</td><td class="highlight">23.5%</td><td>34.1%</td></tr>
+        <tr><td>Prime cost</td><td>66%</td><td class="highlight">55%</td><td>49%</td></tr>
+        <tr><td>Payback (months)</td><td>265</td><td class="highlight">25</td><td>13</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="returns">
+  <div class="container">
+    <div class="sub">Investment Returns</div>
+    <h2>One investor. One store. Station House runs it.</h2>
+    <div class="grid-4" style="margin-top: 36px;">
+      <div class="card"><div class="num">$466k</div><div class="label">Startup cost (2nd gen)</div></div>
+      <div class="card"><div class="num">29%</div><div class="label">Investor cash-on-cash (Base)</div></div>
+      <div class="card"><div class="num">3.5 yrs</div><div class="label">Investor payback (Base)</div></div>
+      <div class="card"><div class="num">$123k</div><div class="label">Station House total / year (Base)</div></div>
+    </div>
+    <p style="margin-top: 28px; max-width: 780px; color: #ccc;">Assumes Station House 30% ownership, 3% management fee, and investor funds 100% of the build-out. Commissary markup (cost + 25%) flows to Station House. Deal terms are adjustable.</p>
+    <p style="margin-top: 12px; max-width: 780px; color: #aaa; font-size: 0.95rem;"><strong>What “Station House total” means:</strong> It is the combined annual benefit to Station House from one Express store in the Base case — the 3% management fee + Station House’s 30% share of store profit + the commissary markup on meats transferred to the store. It is not the store’s EBITDA; it is Station House’s total take from running and supplying the unit.</p>
+  </div>
+</section>
+
+<section id="scale" style="background: var(--dark);">
+  <div class="container">
+    <div class="sub">Scalability</div>
+    <h2>From one store to multi-hub</h2>
+    <p style="margin: 16px 0 28px; max-width: 760px; color: #ccc;">Each additional store run on the same model adds ~$123k/year to Station House in the Base case (fee + ownership + commissary markup).</p>
+    <div class="grid-4">
+      <div class="card"><div class="num">$123k</div><div class="label">1 store</div></div>
+      <div class="card"><div class="num">$246k</div><div class="label">2 stores</div></div>
+      <div class="card"><div class="num">$368k</div><div class="label">3 stores</div></div>
+      <div class="card"><div class="num">$614k</div><div class="label">5 stores</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <div class="sub">Why This Works</div>
+    <h2>Raising Cane’s simplicity applied to craft BBQ</h2>
+    <div class="grid-2" style="margin-top: 32px;">
+      <div>
+        <div class="why-item"><h3>01 · Limited menu</h3><p>5 meats + 3 sides + Cubans. Easy training, consistent quality, high throughput.</p></div>
+        <div class="why-item"><h3>02 · Commissary leverage</h3><p>Central smoke production. Store focuses on service and finishing. Meat at cost + 25%.</p></div>
+        <div class="why-item"><h3>03 · Proven brand</h3><p>Station House BBQ already has local recognition and catering volume in Tampa.</p></div>
+      </div>
+      <div>
+        <div class="why-item"><h3>04 · Favorable occupancy</h3><p>2nd-generation restaurant space lowers build-out. $6k base rent modeled.</p></div>
+        <div class="why-item"><h3>05 · Data-backed volumes</h3><p>Anchored to real Square sales from Seminole Heights (Sep–Oct 2026).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ask" style="background: var(--dark);">
+  <div class="container" style="text-align: center;">
+    <div class="sub">The Ask</div>
+    <h2>Partner with us on the first Express store</h2>
+    <p style="max-width: 720px; margin: 20px auto 32px; color: #ccc;">We are seeking an investor partner to fund the 2nd-generation build-out (~$466k) for the first Station House Express location. Station House provides the brand, systems, recipes, commissary supply, and day-to-day operations.</p>
+    <ul style="list-style: none; max-width: 520px; margin: 0 auto 36px; text-align: left; line-height: 2.2; color: #ddd;">
+      <li>• Full model workbook with editable assumptions</li>
+      <li>• Menu costing, order guides, smoke schedule</li>
+      <li>• Commissary P&L and ownership waterfall</li>
+      <li>• Path to additional stores under the same system</li>
+    </ul>
+    <a href="mailto:info@stationhousebbq.com" class="btn">Contact Anthony</a>
+    <a href="StationHouse_Express_Financial_Model.xlsx" class="btn btn-outline" download>Download Model</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="images/logo.png" alt="Station House BBQ" />
+    <p>Station House BBQ · Tampa, Florida<br>Anthony Fonseca, Founder · <a href="mailto:info@stationhousebbq.com">info@stationhousebbq.com</a></p>
+    <p style="margin-top: 16px; font-size: 0.85rem;">Full financial model, assumptions, and sources available in the accompanying workbook. October 2026.</p>
+  </div>
+</footer>
+</body>
+</html>
